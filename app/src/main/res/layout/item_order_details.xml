@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_user_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/MainOrderItemTextStyle"
+            android:layout_alignTop="@+id/img_user_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/img_user_head"
+            android:text="诸葛光明"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/own" />
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_user_head"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_marginBottom="5dp"
+            android:text="订单号：12345646131"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_name_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_below="@+id/tv_order_id"
+            android:layout_marginTop="10dp"
+            android:text="诸葛光明购买了："
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_order_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_order_state"
+            android:layout_below="@+id/tv_name_buy"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/img_user_head"
+            android:background="@drawable/order_listview_bg"
+            android:orientation="vertical">
+
+            <com.comexample.lieke.myapplication.view.OrderListView
+                android:id="@+id/lv_order_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.comexample.lieke.myapplication.view.OrderListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dp"
+                    android:text="共计"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_all_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_all"
+                    android:text="￥3004"
+                    android:textColor="@color/red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_time_ago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="1小时之前" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ll_order_goods"
+            android:layout_alignRight="@+id/iv_order_state"
+            android:layout_below="@+id/ll_order_goods"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/order_listview_bg">
+
+            <include layout="@layout/item_order_members"></include>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/ll_order_goods"
+            android:layout_alignRight="@+id/iv_order_state"
+            android:layout_below="@+id/ll_members"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/order_listview_bg">
+
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_code"
+                android:layout_alignRight="@+id/iv_code"
+                android:layout_below="@+id/iv_code"
+                android:layout_marginTop="3dp"
+                android:text="核销码"
+                android:textSize="9sp" />
+
+
+            <TextView
+                android:id="@+id/tv_code_name"
+                style="@style/MainOrderItemTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_code"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/iv_code"
+                android:text="杭州外婆家城西银泰路"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_code_phoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_code_name"
+                android:layout_below="@+id/tv_code_name"
+                android:layout_marginTop="5dp"
+                android:text="电话：0571-1234567"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

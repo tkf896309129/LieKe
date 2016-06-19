@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/MainOrderItemBgStyle"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/img_order"
+                style="@style/MainOrderItemImgStyle"
+                android:src="@mipmap/order" />
+
+            <TextView
+                style="@style/MainOrderItemTextStyle"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img_order"
+                android:text="我的订单" />
+
+            <TextView
+                android:id="@+id/tv_line_order"
+                style="@style/LineStyle" />
+
+            <ImageView style="@style/ToRightImageStyle" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_bonty"-->
+            <!--style="@style/RightOfImgTextStyle"-->
+            <!--android:layout_toLeftOf="@+id/img_right_bounty"-->
+            <!--android:text="1个"-->
+            <!--android:textColor="@color/grayText" />-->
+        </RelativeLayout>
+
+        <com.comexample.lieke.myapplication.view.OrderListView
+            android:id="@+id/lv_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.comexample.lieke.myapplication.view.OrderListView>
+
+    </LinearLayout>
+
+</LinearLayout>

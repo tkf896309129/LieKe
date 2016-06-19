@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_top_title"></include>
+
+    <com.comexample.lieke.myapplication.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpahGray"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/MainOrderItemBgStyle"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="团队码：13216445896"
+                    android:textColor="@color/grayText"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/item_main_top"></include>
+
+            <include layout="@layout/item_main_store"></include>
+
+            <include layout="@layout/item_main_order"></include>
+
+        </LinearLayout>
+    </com.comexample.lieke.myapplication.view.ReboundScrollView>
+
+
+</LinearLayout>

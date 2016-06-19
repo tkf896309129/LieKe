@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/MainOrderItemBgStyle">
+
+            <ImageView
+                android:id="@+id/img_message"
+                style="@style/MainOrderItemImgStyle"
+                android:src="@mipmap/message" />
+
+            <TextView
+                style="@style/MainOrderItemTextStyle"
+                android:layout_alignLeft="@+id/tv_line_message"
+                android:text="我的消息" />
+
+            <TextView
+                android:id="@+id/tv_line_message"
+                style="@style/LineStyle"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img_message" />
+
+            <ImageView
+                android:id="@+id/iv_right_message"
+                style="@style/ToRightImageStyle" />
+
+            <TextView
+                android:id="@+id/tv_message_num"
+                style="@style/RightOfImgTextStyle"
+                android:layout_toLeftOf="@+id/iv_right_message"
+                android:text="12"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my_team"
+            style="@style/MainOrderItemBgStyle">
+
+            <ImageView
+                android:id="@+id/img_team"
+                style="@style/MainOrderItemImgStyle"
+                android:src="@mipmap/my_team" />
+
+            <TextView
+                style="@style/MainOrderItemTextStyle"
+                android:layout_alignLeft="@+id/tv_line_team"
+                android:text="我的团队" />
+
+            <TextView
+                android:id="@+id/tv_line_team"
+                style="@style/LineStyle"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img_team" />
+
+            <ImageView
+                android:id="@+id/img_right_team"
+                style="@style/ToRightImageStyle" />
+
+
+            <TextView
+                android:id="@+id/tv_team"
+                style="@style/RightOfImgTextStyle"
+                android:layout_toLeftOf="@+id/img_right_team"
+                android:text="+12"
+                android:textColor="@color/blue" />
+        </RelativeLayout>
+
+
+        <RelativeLayout style="@style/MainOrderItemBgStyle">
+
+            <ImageView
+                android:id="@+id/img_bounty"
+                style="@style/MainOrderItemImgStyle"
+                android:src="@mipmap/bounty" />
+
+            <TextView
+                style="@style/MainOrderItemTextStyle"
+                android:layout_alignLeft="@+id/tv_line_bounty"
+                android:text="我的赏金" />
+
+            <TextView
+                android:id="@+id/tv_line_bounty"
+                style="@style/LineStyle"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img_bounty"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/img_right_bounty"
+                style="@style/ToRightImageStyle" />
+
+            <TextView
+                android:id="@+id/tv_bonty"
+                style="@style/RightOfImgTextStyle"
+                android:layout_toLeftOf="@+id/img_right_bounty"
+                android:text="+￥120"
+                android:textColor="@color/green" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

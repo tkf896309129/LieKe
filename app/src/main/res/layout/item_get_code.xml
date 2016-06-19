@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_get_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/head_img" />
+
+        <TextView
+            android:id="@+id/tv_code_login"
+            style="@style/LoginRegeditTextsStyle"
+            android:text="登录" />
+
+        <RelativeLayout
+            android:id="@+id/ll_code"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_above="@+id/btn_code"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/tv_code_china"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手机号"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/et_code_phone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_code_china"
+                android:background="@drawable/edittext_bg"
+                android:hint="输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/tv_code_line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/et_code_phone"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray" />
+
+
+            <EditText
+                android:id="@+id/et_code_psw"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/tv_code_china"
+                android:layout_below="@+id/et_code_phone"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_bg"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:layout_alignTop="@+id/et_code_psw"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/tv_get_code"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/et_code_psw"
+                android:layout_marginTop="5dp"
+                android:text="获取手机验证码"
+                android:textColor="@color/buttonColor" />
+
+
+            <TextView
+                android:id="@+id/tv_code_line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/et_code_psw"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_code_line2"
+                android:layout_marginTop="10dp"
+                android:text="温馨提示：我们已经给您的手机发送了一条信息，请注意查收"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_code"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_bg"
+            android:text="完成"
+            android:textColor="@color/buttonColor" />
+    </RelativeLayout>
+</LinearLayout>
